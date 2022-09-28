@@ -2,20 +2,12 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,16 +20,62 @@
   color: #61dafb;
 }
 
+.item {
+  /* display: flex;
+  flex-wrap: wrap; */
+
+  border: 2px solid lightslategray;
+  border-radius: 10px;
+  max-block-size: 350px;
+  margin: 30px;
+}
+.review-card-title {
+color: #110c41;
+  justify-content: center;
+  align-self: flex-start;
+
+
+}
+
+.review-card-author {
+
+}
+
+.review-card-blurb {
+
+}
+
+.review-card-category {
+  align-self: flex-start;
+}
+
+.review-card-img {
+max-inline-size: 100px;
+float: right;
+align-self: stretch;
+} 
+
+.review-card-bottom {
+
+}
+
+.review-card-votes {
+align-self: flex-end;
+}
+
+.review-card-comments {
+  align-self: flex-end;
+}
+
+.review-card-date {
+  align-self: flex-end;
+}
+
+
+
 footer {
 display: flex;
 align-items: flex-end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
