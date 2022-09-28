@@ -45,13 +45,3 @@ if (isLoading) return <p>Loading...</p>;
 }
 export default Reviews
 
-//                   review_id: Number, 
-//                   title: String, 
-//                   owner: String, 
-//                   designer: String, 
-//                   review_body: String,
-//                   review_img_url: String,
-//                   category: String, 
-//                   created_at: String,
-//                   votes: Number, 
-//                   comment_count: String
