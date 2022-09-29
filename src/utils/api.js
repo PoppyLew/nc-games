@@ -11,3 +11,11 @@ export const getReviews = () => {
         return res.data
     })
 }
+
+export const getCategories = () => {
+    return gamesApi
+    .get('/categories')
+    .then((res) => {
+        return res.data
+    })
+}
