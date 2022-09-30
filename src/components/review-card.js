@@ -1,3 +1,5 @@
+import { Link, Routes } from "react-router-dom"
+
 const ReviewCard = ({review}) => {
 
     return (
@@ -11,7 +13,9 @@ const ReviewCard = ({review}) => {
                     <p className='review-card-votes'> Votes: {review.votes}</p>
                     <p className='review-card-comments'>Commment Count: {review.comment_count}</p>
                     <p className='review-card-date'>Added {review.created_at}</p>
+                    <Link to={`/review/${review.review_id}`} className='Review-link' > Go to review </Link>
                 </section>
+            
     )
 }
 

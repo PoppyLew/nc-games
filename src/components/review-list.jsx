@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { getReviews } from "../utils/api";
-import ReviewCard from "../utils/review-card";
+import ReviewCard from "./review-card";
 
 
 const Reviews = () => {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getReviews } from "../utils/api";
-import ReviewCard from "../utils/review-card";
+import ReviewCard from "./review-card";
 
 const ReviewsByCategory = (props) => {
   const [currReviews, setCurrReviews] = useState([]);

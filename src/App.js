@@ -7,6 +7,7 @@ import Nav from './components/nav';
 import Reviews from './components/review-list';
 import ReviewsByCategory from './components/reviews-by-category';
 import { getCategories } from './utils/api';
+import ReviewPage from './components/review-page';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
       <Route path="/reviews/:category" element={<ReviewsByCategory
       currCategories={currCategories}
       />}></Route>
+      <Route path="/review/:review_id" element={<ReviewPage/>}></Route>
       <Route path="*" > 404 page not found</Route>
       </Routes>
 

@@ -72,7 +72,11 @@ align-self: flex-end;
   align-self: flex-end;
 }
 
-
+.review-page-img {
+  max-width: 500px;
+  float: right;
+  padding-right: 30px;
+}
 
 footer {
 display: flex;
