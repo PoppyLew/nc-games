@@ -1,12 +1,20 @@
 import axios from 'axios'
 
 const gamesApi = axios.create({
-    baseURL:'http://games-api-app.herokuapp.com/api' 
+    baseURL:'https://games-api-app.herokuapp.com/api' 
 });
 
-export const getReviews = () => {
+export const getReviews = (category) => {
     return gamesApi
-    .get('/reviews')
+    .get('/reviews', {params: {category: category }})
+    .then((res) => {
+        return res.data
+    })
+}
+
+export const getCategories = () => {
+    return gamesApi
+    .get('/categories')
     .then((res) => {
         return res.data
     })

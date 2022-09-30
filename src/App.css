@@ -16,17 +16,18 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Review-link {
+  color: darkblue;
+  padding: 5px;
 }
 
+
 .item {
-  /* display: flex;
-  flex-wrap: wrap; */
+
 
   border: 2px solid lightslategray;
   border-radius: 10px;
-  max-block-size: 350px;
+  max-block-size: 400px;
   margin: 30px;
 }
 .review-card-title {
