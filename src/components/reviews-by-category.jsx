@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getReviews } from "../utils/api";
-import createReviewCard from "../utils/create-review-card";
+import ReviewCard from "../utils/review-card";
 
 const ReviewsByCategory = (props) => {
   const [currReviews, setCurrReviews] = useState([]);
@@ -16,11 +16,9 @@ const ReviewsByCategory = (props) => {
   useEffect(() => {
     setIsLoading(true);
 
-    getReviews().then((data) => {
-      const selectedReviews = data.reviews.filter((review) => {
-        return review.category === category;
-      });
-      setCurrReviews(selectedReviews);
+    getReviews(category).then((data) => {
+      
+      setCurrReviews(data.reviews);
 
       setIsLoading(false);
     });
@@ -29,11 +27,12 @@ const ReviewsByCategory = (props) => {
   if (isLoading) return <p>Loading...</p>;
   return (
     <div>
-      <h2>{category}</h2>
-      <h4>{categoryObj.description}</h4>
-
+      <h2 key={`${category}-header`}>{category}</h2>
+      <h4 key={`${category}-description`}>{categoryObj.description}</h4>
+      
       {currReviews.map((review) => {
-        return createReviewCard(review);
+        return <ReviewCard
+        review={review}/>;
       })}
     </div>
   );

@@ -1,4 +1,5 @@
-const createReviewCard = (review) => {
+const ReviewCard = ({review}) => {
+
     return (
     
         <section  key={review.review_id} className='item'>
@@ -14,4 +15,4 @@ const createReviewCard = (review) => {
     )
 }
 
-export default createReviewCard
+export default ReviewCard

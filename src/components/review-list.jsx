@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react"
 import { getReviews } from "../utils/api";
-import {Routes, Route} from 'react-router-dom';
-import ReviewsByCategory from "./reviews-by-category";
-import createReviewCard from "../utils/create-review-card";
+import ReviewCard from "../utils/review-card";
 
 
 const Reviews = () => {
@@ -31,7 +29,8 @@ if (isLoading) return <p>Loading...</p>;
             <h2>All Reviews</h2>
         
             {currReviews.map((review) => {
-                   return createReviewCard(review)
+                   return <ReviewCard
+                   review={review}/>
             })}
         </div>
 
