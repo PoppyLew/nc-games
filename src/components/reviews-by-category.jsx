@@ -9,15 +9,12 @@ const ReviewsByCategory = (props) => {
   const { category } = useParams();
   const { currCategories } = props;
 
-  const categoryObj = currCategories.find(elem => 
-    elem.slug === category
-  );
+  const categoryObj = currCategories.find((elem) => elem.slug === category);
 
   useEffect(() => {
     setIsLoading(true);
 
     getReviews(category).then((data) => {
-      
       setCurrReviews(data.reviews);
 
       setIsLoading(false);
@@ -29,10 +26,9 @@ const ReviewsByCategory = (props) => {
     <div>
       <h2 key={`${category}-header`}>{category}</h2>
       <h4 key={`${category}-description`}>{categoryObj.description}</h4>
-      
+
       {currReviews.map((review) => {
-        return <ReviewCard
-        review={review}/>;
+        return <ReviewCard review={review} />;
       })}
     </div>
   );
