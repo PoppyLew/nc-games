@@ -9,9 +9,9 @@ const ReviewsByCategory = (props) => {
   const { category } = useParams();
   const { currCategories } = props;
 
-  const categoryObj = currCategories.filter((elem) => {
-    return elem.slug === category;
-  })[0];
+  const categoryObj = currCategories.find(elem => 
+    elem.slug === category
+  );
 
   useEffect(() => {
     setIsLoading(true);
