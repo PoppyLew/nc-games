@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const gamesApi = axios.create({
-    baseURL:'http://games-api-app.herokuapp.com/api' 
+    baseURL:'https://games-api-app.herokuapp.com/api' 
 });
 
 export const getReviews = () => {

@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react"
 import { getReviews } from "../utils/api";
+import {Routes, Route} from 'react-router-dom';
+import ReviewsByCategory from "./reviews-by-category";
 import createReviewCard from "../utils/create-review-card";
 
 
 const Reviews = () => {
 
+
     const [currReviews, setCurrReviews] = useState([])
     const [isLoading, setIsLoading] = useState(true);
- 
+    
 
     useEffect(() => {
         getReviews()
